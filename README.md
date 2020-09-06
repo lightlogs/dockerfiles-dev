@@ -5,12 +5,13 @@
 3. cd .. && docker-compose up -d --build
 
 ## Database:
-DB_CONNECTION=pgsql
-DB_HOST=timescale
-DB_PORT=5432
-DB_DATABASE=lightlogs
-DB_USERNAME=default
-DB_PASSWORD=secret
+- DB_CONNECTION=pgsql
+- DB_HOST=timescale
+- DB_PORT=5432
+- DB_DATABASE=lightlogs
+- DB_USERNAME=default
+- clear
+- DB_PASSWORD=secret
 
 ## Composer:
 ```bash
