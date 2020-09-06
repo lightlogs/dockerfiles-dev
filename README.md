@@ -21,3 +21,8 @@ docker-compose run --rm composer i
 ```bash
 docker-compose run --rm app php artisan migrate:fresh --seed
 ```
+
+## Services:
+  - nginx: http://localhost:8080
+  - pgsql: timescale:5432
+  - grafana: http://localhost:3000
