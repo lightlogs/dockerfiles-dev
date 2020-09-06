@@ -10,7 +10,6 @@
 - DB_PORT=5432
 - DB_DATABASE=lightlogs
 - DB_USERNAME=default
-- clear
 - DB_PASSWORD=secret
 
 ## Composer:
