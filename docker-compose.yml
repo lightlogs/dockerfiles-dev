@@ -36,7 +36,8 @@ services:
     image: timescale/timescaledb:latest-pg12
     container_name: timescale
     restart: unless-stopped
-    tty: true
+    volumes: 
+      - ./pgsql:/var/lib/postgresql
     ports: 
         - "5432:5432"
     environment: 
@@ -45,3 +46,15 @@ services:
         POSTGRES_PASSWORD: secret
     networks: 
         - lightlogs
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    user: "1000"
+    ports: 
+      - "3000:3000"
+    volumes: 
+      - ./grafana:/var/lib/grafana
+    networks: 
+      - lightlogs
+    
